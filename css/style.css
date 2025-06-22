@@ -58,13 +58,17 @@ header {
 /* Banner Video */
 .banner {
   position: relative;
-  height: 100vh;
+  height: 100dvh; 
   overflow: hidden;
 }
 .banner-video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: 0; /* not -1 */
 }
 
 .overlay {
@@ -895,7 +899,7 @@ body {
 /* WhatsApp Button */
 .whatsapp-float-contact {
   position: fixed;
-  bottom: 20px;
+  bottom: 80px;
   right: 20px;
   background-color: #25d366;
   color: white;
@@ -904,6 +908,7 @@ body {
   font-size: 24px;
   z-index: 1000;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+
 }
 
 /* Map */
@@ -969,13 +974,11 @@ body {
 
 
 
-
 .banner {
   position: relative;
   height: 100vh;
   overflow: hidden;
 }
-
 .banner-video {
   width: 100%;
   height: 100%;
@@ -1057,13 +1060,19 @@ body {
   color: var(--black); 
 }
 
-
 #navbar {
   display: flex;
   justify-content: space-between; 
   align-items: center;
   padding: 10px 40px;
+  position: fixed;         /* ✅ fixed instead of sticky */
+  top: 0;                  /* ✅ ensure it sticks to top */
+  width: 100%;             /* ✅ take full width */
+  z-index: 1000;           /* ✅ stay above video/banner */
+  background: white;
 }
+
+
 
 /* Center nav links */
 nav {
@@ -1170,7 +1179,7 @@ img {
 
 
 .about-owner {
-  background: #f0f8ff;
+  background: #111;
   padding: 80px 20px;
   box-shadow: inset 0 20px 60px rgba(0, 0, 0, 0.03);
 }
@@ -1200,20 +1209,20 @@ img {
 
 .owner-content h2 {
   font-size: 34px;
-  color: #002244;
+  color: #f0f2f5;
   margin-bottom: 8px;
 }
 
 .owner-content h4 {
   font-size: 18px;
-  color: #25d366;
+  color: #eef9f2;
   margin-bottom: 20px;
   font-weight: 600;
 }
 
 .owner-content p {
   font-size: 17px;
-  color: #444;
+  color: #f8f5f5;
   line-height: 1.8;
   margin-bottom: 18px;
 }
@@ -1444,14 +1453,20 @@ header {
 /* Banner */
 .banner {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 80px);  /* ✅ subtract navbar height */
   overflow: hidden;
+  margin-top: 80px;            /* Optional: only if navbar is not fixed */
 }
 
-.banner-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+@media (max-width: 768px) {
+  .banner {
+    height: auto;
+  }
+
+  .banner-video {
+    height: auto;
+    min-height: 300px;
+  }
 }
 
 .overlay {
@@ -1807,5 +1822,82 @@ header {
   }
   .team-card, .flip-card, .card {
     flex: 1 1 100%;
+  }
+}
+
+
+
+/* 📱 Responsive for Owner Section */
+@media (max-width: 768px) {
+  .owner-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .owner-image img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+  }
+
+  .owner-content h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .owner-content h4 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .owner-content p {
+    font-size: 15px;
+    text-align: justify;
+  }
+}
+
+/* 📱 Responsive for Card Section */
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr; /* 1 card per row on small screen */
+    padding: 0 15px;
+  }
+
+  .projects-intro h2 {
+    font-size: 26px;
+  }
+
+  .projects-intro p {
+    font-size: 16px;
+  }
+
+  .card {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .banner {
+    height: 60vh; /* screen chhoti ho to height kam ho */
+  }
+
+  .banner-video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  #navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
   }
 }
