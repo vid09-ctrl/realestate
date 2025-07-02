@@ -615,6 +615,36 @@
       .then(res => res.text())
       .then(data => document.getElementById('footer-placeholder').innerHTML = data);
   </script>
+  <!-- Scripts -->
+ <script>
+  // Load navbar and then attach toggle JS
+  fetch('navbar.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+
+      // ✅ NOW we attach event listeners
+      const toggleBtn = document.getElementById('menu-toggle');
+      const navLinks = document.getElementById('nav-links');
+
+      toggleBtn?.addEventListener('click', () => {
+        navLinks?.classList.toggle('active');
+      });
+
+      window.toggleDropdown = function(event) {
+        if (window.innerWidth <= 768) {
+          event.preventDefault();
+          const parentLi = event.target.closest('.dropdown');
+          parentLi?.classList.toggle('open');
+        }
+      };
+    });
+
+  // Load footer normally
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+</script>
 
 
 

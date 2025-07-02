@@ -7,7 +7,7 @@
 
 /* Navbar */
 #navbar {
-  background-color: #e0f7fa;
+  background-color:rgb(39, 46, 51);
   color: #004d99;
   padding: 15px 30px;
   display: flex;
@@ -25,11 +25,21 @@
   text-decoration: none;
 }
 
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 20px;
+#nav-links {
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  z-index: 1000;
 }
+
+
 
 .nav-links a {
   color: #004d99;
@@ -94,42 +104,70 @@
   color: #e0f7fa;
 }
 
+/* Show dropdown on hover (desktop) */
 .dropdown:hover .dropdown-menu {
   display: flex;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
   }
 
-  .nav-links {
+  #nav-links {
     display: none;
     flex-direction: column;
-    background-color: white;
+    align-items: flex-start;
+    background-color: #ffffff;
     position: absolute;
     top: 70px;
-    right: 30px;
-    width: 200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 15px;
+    right: 0;
+    width: 100%;
+    max-width: 280px;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+    padding: 20px;
     z-index: 1000;
   }
 
-  .nav-links.active {
+  #nav-links.active {
     display: flex;
   }
 
+  .nav-links {
+    list-style: none; /* ✅ REMOVE BULLETS */
+    width: 100%;
+    gap: 15px;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    color: #004d99;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+
+  .nav-links a:hover {
+    background-color: #e0f7fa;
+  }
+
+  /* Disable hover dropdown */
   .dropdown:hover .dropdown-menu {
     display: none;
   }
 
   .dropdown .dropdown-menu {
+    display: none;
     position: static;
-    box-shadow: none;
     background: none;
     padding: 0;
+    box-shadow: none;
   }
 
   .dropdown.open .dropdown-menu {
@@ -139,8 +177,10 @@
 
   .dropdown-menu li a {
     padding-left: 30px;
+    font-size: 14px;
   }
 }
+
 
 /* Footer */
 .footer {
@@ -168,4 +208,12 @@
 
 .footer .social-icons a:hover {
   color: #0066cc;
+}
+
+
+.logo img,
+.logo-img {
+  height: 50px; /* you can adjust this */
+  width: auto;
+  object-fit: contain;
 }

@@ -1,20 +1,23 @@
 <header id="navbar">
-  <a href="index.html" class="logo">RamDev Group</a>
+  <a href="index.html" class="logo">
+  <img src="images/logo.png.png" alt="RamDev Group Logo" class="logo-img" />
+</a>
 
+
+  <!-- ✅ Toggle Button (3 bars) -->
   <div class="menu-toggle" id="menu-toggle">
     <span></span>
     <span></span>
     <span></span>
   </div>
 
-  <nav>
-    <ul class="nav-links" id="nav-links">
+  <!-- ✅ Navigation Menu -->
+  <nav id="nav-links">
+    <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-
       <li class="dropdown">
-        <a href="project.html" onclick="toggleDropdown(event)">Projects</a>
+        <a href="project.html">Projects</a>
       </li>
-
       <li class="dropdown">
         <a href="#" onclick="toggleDropdown(event)">About</a>
         <ul class="dropdown-menu">
@@ -23,17 +26,13 @@
           <li><a href="team.html">Our Team</a></li>
         </ul>
       </li>
-
-      <li class="dropdown">
-        <a href="contact.html" onclick="toggleDropdown(event)">Contact</a>
-      </li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
 
 
 <script>
-  // Mobile menu toggle
   document.addEventListener('DOMContentLoaded', () => {
     const toggleBtn = document.getElementById('menu-toggle');
     const navLinks = document.getElementById('nav-links');
@@ -43,7 +42,6 @@
     });
   });
 
-  // Dropdown toggle for mobile
   function toggleDropdown(event) {
     if (window.innerWidth <= 768) {
       event.preventDefault();
