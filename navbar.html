@@ -9,12 +9,10 @@
 
   <nav>
     <ul class="nav-links" id="nav-links">
-
       <li><a href="index.html">Home</a></li>
 
       <li class="dropdown">
         <a href="project.html" onclick="toggleDropdown(event)">Projects</a>
-       
       </li>
 
       <li class="dropdown">
@@ -28,23 +26,24 @@
 
       <li class="dropdown">
         <a href="contact.html" onclick="toggleDropdown(event)">Contact</a>
-       
       </li>
-
     </ul>
   </nav>
 </header>
 
+
 <script>
   // Mobile menu toggle
-  const toggleBtn = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
 
-  toggleBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    toggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
   });
 
-  // Mobile dropdown toggle
+  // Dropdown toggle for mobile
   function toggleDropdown(event) {
     if (window.innerWidth <= 768) {
       event.preventDefault();
