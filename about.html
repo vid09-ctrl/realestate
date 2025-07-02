@@ -4,122 +4,119 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About - RamDev Group</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0fbff;
+      color: #004d99;
+    }
+
+    .section {
+      padding: 60px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .row-section {
+      background-color: #ffffff;
+    }
+
+    .row-section.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .image {
+      flex: 1 1 400px;
+      text-align: center;
+    }
+
+    .image img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .text {
+      flex: 1 1 400px;
+      padding: 20px;
+    }
+
+    .text h2 {
+      font-size: 28px;
+      color: #004d99;
+      margin-bottom: 15px;
+    }
+
+    .text p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
 
-  <header id="navbar">
-  <a href="index.html" class="logo">RamDev Group</a>
-  <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
-  <nav>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
-      <li class="dropdown">
-        <a href="about.html">About ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="sustain.html">CRS</a></li>
-          <li><a href="team.html">Our Team</a></li>
-        </ul>
-      </li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="project.html">Our Project</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Navbar Include -->
+  <div id="navbar-placeholder"></div>
 
- 
-
-<!-- About Section with Image Left -->
-<section class="section row-section">
-  <div class="image">
-    <img src="images/aboutcompany.png" alt="About Ramdev Group">
-  </div>
-  <div class="text">
-    <h2>About Ramdev Group</h2>
-    <p>
-      The diversified business organization is a veteran in the industry with an experience spanning 35 years and more. Ramdev Group has its headquarters in the country’s financial capital, Mumbai. And like any successful business, Ramdev Group too has its own thought leader, <strong>Mr. Mahendra R. Sangoi</strong>, the company’s Chairman and Managing Director, spearheading the business operations with unmatched finesse and dedication.
-    </p>
-  </div>
-</section>
-
-<!-- Vision & Mission Section with Image Right -->
-<section class="section row-section reverse">
-  <div class="image">
-    <img src="images/aboutcompany1.png" alt="Vision and Mission">
-  </div>
-  <div class="text">
-    <h2>Our Vision</h2>
-    <p>To be recognized as the best and the most trusted real estate developer providing excellent quality deliverance with superior values and returns to our customers.</p>
-    <h2>Our Mission</h2>
-    <p>Following a customer driven methodology, we aim to be the most esteemed brand through our business morals and ethics, feeling of credibility and pride that we take in our social activities benefitting our clients and society as a whole.</p>
-  </div>
-</section>
-
-<!-- Values Section with Image Left -->
-<section class="section row-section">
-  <div class="image">
-    <img src="images/aboutcompany2.png" alt="Our Values">
-  </div>
-  <div class="text">
-    <h2>Our True Essence is Rooted</h2>
-    <p>
-      Our values center on a commitment to quality at every level. We work to ensure both happy customers and other stakeholders. Strict adherence to business ethics drives our everyday operations. Every service offered from our end is a bond of trust strengthened over time. Our values drive us; they define Ramdev Group as a distinct business entity.
-    </p>
-  </div>
-</section>
-
-
-<!-- Footer -->
-<footer class="footer">
-  <div class="footer-container">
-    <!-- Company Info -->
-    <div class="footer-section">
-  <h3>RamDev Group</h3>
-  <p>Shaping Dreams Into Reality</p>
-
-  <div class="footer-social-wrapper">
-    <div class="social-icons">
-      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+  <!-- About Section with Image Left -->
+  <section class="section row-section">
+    <div class="image">
+      <img src="images/aboutcompany.png" alt="About Ramdev Group">
     </div>
-    <div class="footer-extra-info">
-      <p><strong>Follow us for updates, events & project launches.</strong></p>
-      <p>We’re active on all major platforms and love staying connected with our clients and community.</p>
+    <div class="text">
+      <h2>About Ramdev Group</h2>
+      <p>
+        The diversified business organization is a veteran in the industry with an experience spanning 35 years and more. Ramdev Group has its headquarters in the country’s financial capital, Mumbai. And like any successful business, Ramdev Group too has its own thought leader, <strong>Mr. Mahendra R. Sangoi</strong>, the company’s Chairman and Managing Director, spearheading the business operations with unmatched finesse and dedication.
+      </p>
     </div>
-  </div>
-</div>
+  </section>
 
-
-    <!-- Quick Links -->
-    <div class="footer-section">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="project.html">Our Projects</a></li>
-        <li><a href="team.html">CRS</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+  <!-- Vision & Mission Section -->
+  <section class="section row-section reverse">
+    <div class="image">
+      <img src="images/aboutcompany1.png" alt="Vision and Mission">
     </div>
-
-    <!-- Contact Info -->
-    <div class="footer-section">
-      <h4>Contact</h4>
-      <p>Swagat Apartment, 6th Floor,<br>
-         Shraddhanand Road, Vile Parle (E),<br>
-         Mumbai - 400057</p>
-      <p>Email: <a href="mailto:info@ramdevgroup.com">info@ramdevgroup.com</a></p>
-      <p>Website: <a href="https://ramdevgroupindia.com" target="_blank">ramdevgroupindia.com</a></p>
+    <div class="text">
+      <h2>Our Vision</h2>
+      <p>To be recognized as the best and the most trusted real estate developer providing excellent quality deliverance with superior values and returns to our customers.</p>
+      <h2>Our Mission</h2>
+      <p>Following a customer driven methodology, we aim to be the most esteemed brand through our business morals and ethics, feeling of credibility and pride that we take in our social activities benefitting our clients and society as a whole.</p>
     </div>
-  </div>
+  </section>
 
-  <!-- Footer Bottom -->
-  <div class="footer-bottom">
-    <p>Created by <span class="highlight">Itegoss</span> | © 2025 All rights reserved</p>
-  </div>
-</footer>
+  <!-- Values Section -->
+  <section class="section row-section">
+    <div class="image">
+      <img src="images/aboutcompany2.png" alt="Our Values">
+    </div>
+    <div class="text">
+      <h2>Our True Essence is Rooted</h2>
+      <p>
+        Our values center on a commitment to quality at every level. We work to ensure both happy customers and other stakeholders. Strict adherence to business ethics drives our everyday operations. Every service offered from our end is a bond of trust strengthened over time. Our values drive us; they define Ramdev Group as a distinct business entity.
+      </p>
+    </div>
+  </section>
 
+  <!-- Footer Include -->
+  <div id="footer-placeholder"></div>
 
+  <!-- Scripts -->
+  <script>
+    // Load navbar and footer dynamically
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
 </body>
 </html>

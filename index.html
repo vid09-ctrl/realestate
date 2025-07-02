@@ -3,138 +3,198 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RamDev Group</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>RamDev Real Estate</title>
+  <link rel="stylesheet" href="css/navbar.css" />
+  <style>
+    /* Global Theme Colors */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: white;
+      color: #004d99;
+    }
 
+        /* Banner Styling */
+    #home {
+      position: relative;
+      width: 100%;
+      height: 100vh; /* full screen */
+      overflow: hidden;
+    }
+
+   #home video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1;
+}
+
+    .banner-content {
+      position: relative;
+      z-index: 2;
+      color: #e0f7fa;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .banner-content h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-content p {
+      font-size: 22px;
+      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .banner-content a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 28px;
+      background-color: #004d99;
+      color: #e0f7fa;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .banner-content a:hover {
+      background-color: #0066cc;
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    #about {
+      background-color: #cceeff;
+    }
+
+    #welcome-section {
+      background-color: #f0fbff;
+    }
+
+    #welcome-section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #004d99;
+    }
+
+    #welcome-section p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #333;
+    }
+
+    .motivation-banner {
+  background: url('imgages/index.png') no-repeat center center/cover;
+  /* Replace with your actual image path */
+  color: white;
+  position: relative;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.motivation-overlay {
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.motivation-text p {
+  font-size: 18px;
+  margin-bottom: 16px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.motivation-text p strong {
+  font-size: 20px;
+  color: #e0f7fa;
+}
+
+
+    /* Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-60%);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(-50%);
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Navbar -->
- <header id="navbar">
-  <a href="index.html" class="logo">RamDev Group</a>
- 
-  <nav>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="#">About ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="about.html">Overview</a></li>
-          <li><a href="sustain.html">CRS</a></li>
-          <li><a href="team.html">Team</a></li>
-        </ul>
-      </li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="project.html">Project</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Navbar Include -->
+  <div id="navbar-placeholder"></div>
 
+  <!-- Banner Section with Video -->
+  <section id="home">
+    <video autoplay muted loop>
+      <source src="video/banner1.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+   
+  </section>
 
-<!-- ✅ Banner Video Section without overlay -->
-<section id="home" class="banner">
-  <video id="bannerVideo" autoplay muted loop class="banner-video">
-    <source src="video/banner1.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-</section>
-
-</section>
-
-<!-- Welcome Section -->
-<section class="welcome-section">
-  <div class="welcome-container">
-    <h1 class="welcome-title">Welcome to RamDev Group</h1>
-    <p class="welcome-info">
-      At RamDev Group, we don’t just build structures – we build dreams. With decades of experience in real estate, we are committed to delivering quality, trust, and excellence in every project. Our goal is to create homes and spaces that inspire, comfort, and uplift lives. Explore our projects, meet our dedicated team, and discover the foundation of trust we’ve built over the years.
-    </p>
-  </div>
-</section>
-
-<section class="company-highlight">
-  <div class="highlight-container">
-    <h2 class="highlight-title">Leading with Vision & Legacy</h2>
+  <!-- ✅ Welcome Section -->
+  <section id="welcome-section">
+    <h2>Welcome to a World of Possibilities</h2>
     <p>
-      The diversified business organization is a veteran in the industry with an experience spanning 35 years and more.
-      Ramdev Group has its headquarters in the country’s financial capital, <strong>Mumbai</strong>. And like any successful
-      business, Ramdev Group too has its own thought leader, <strong>Mr. Mahendra R. Sangoi</strong>, the company’s
-      Chairman and Managing Director, spearheading the business operations with unmatched finesse and dedication.
+      At RamDev Real Estate, we believe every square foot holds a story. Whether you're searching for your dream home, a business location, or an investment opportunity, we bring innovation and trust to every brick we lay.
     </p>
+  </section>
+
+  <!-- ✅ Motivation Line Section -->
+ <section class="motivation-banner">
+  <div class="motivation-overlay">
+    <div class="motivation-text">
+      <p>Spreading Wings To Newer Avenues,</p>
+      <p>The iconic name in Real Estate Industry,</p>
+      <p>Consistently Driving Change,</p>
+      <p>Pushing up limits,</p>
+      <p>Motivating Business Trends,</p>
+      <p>Everything A Business Is Meant To Be,</p>
+      <p>Find It Under One Roof,</p>
+      <p>Encounter Finesse And Unmatched Quality Only</p>
+      <p><strong>At Ramdev Group</strong></p>
+    </div>
   </div>
 </section>
 
 
-<!-- Vision / Brand Message Section -->
-<section class="vision-section">
-  <h3 class="vision-heading">Shaping Dreams Into Reality</h3>
-  <div class="vision-text">
-    <p>Spreading Wings To Newer Avenues,</p>
-    <p>The iconic name in Real Estate Industry,</p>
-    <p>Consistently Driving Change,</p>
-    <p>Pushing up limits,</p>
-    <p>Motivating Business Trends,</p>
-    <p>Everything A Business Is Meant To Be,</p>
-    <p>Find It Under One Roof,</p>
-    <p>Encounter Finesse And Unmatched Quality Only</p>
-    <p>At <strong>Ramdev Group</strong></p>
-  </div>
-<a href="https://wa.me/917208542366" class="whatsapp-float" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
-</section>
+  <!-- Footer Include -->
+  <div id="footer-placeholder"></div>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="footer-container">
-    <!-- Company Info -->
-    <div class="footer-section">
-  <h3>RamDev Group</h3>
-  <p>Shaping Dreams Into Reality</p>
+  <!-- Scripts -->
+  <script>
+    // Load navbar.html and footer.html dynamically
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
 
-  <div class="footer-social-wrapper">
-    <div class="social-icons">
-      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-    </div>
-    <div class="footer-extra-info">
-      <p><strong>Follow us for updates, events & project launches.</strong></p>
-      <p>We’re active on all major platforms and love staying connected with our clients and community.</p>
-    </div>
-  </div>
-</div>
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
 
-
-    <!-- Quick Links -->
-    <div class="footer-section">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="project.html">Our Projects</a></li>
-        <li><a href="team.html">CRS</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact Info -->
-    <div class="footer-section">
-      <h4>Contact</h4>
-      <p>Swagat Apartment, 6th Floor,<br>
-         Shraddhanand Road, Vile Parle (E),<br>
-         Mumbai - 400057</p>
-      <p>Email: <a href="mailto:info@ramdevgroup.com">info@ramdevgroup.com</a></p>
-      <p>Website: <a href="https://ramdevgroupindia.com" target="_blank">ramdevgroupindia.com</a></p>
-    </div>
-  </div>
-
-  <!-- Footer Bottom -->
-  <div class="footer-bottom">
-    <p>Created by <span class="highlight">Itegoss</span> | © 2025 All rights reserved</p>
-  </div>
-</footer>
-  <script src="js/script.js"></script>
 </body>
 </html>

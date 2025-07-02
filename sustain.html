@@ -4,32 +4,101 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sustains Us - RamDev Group</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0fbff;
+      color: #004d99;
+    }
+
+    .section {
+      padding: 60px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      animation: fadeInUp 1.2s ease forwards;
+      opacity: 0;
+    }
+
+    .csr-header {
+      text-align: center;
+      background-color: #e0f7fa;
+    }
+
+    .csr-header h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .csr-header p {
+      font-size: 16px;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #333;
+    }
+
+    .row-section.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .image {
+      flex: 1 1 400px;
+      text-align: center;
+    }
+
+    .image img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .text {
+      flex: 1 1 400px;
+      padding: 20px;
+    }
+
+    .text h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+      color: #004d99;
+    }
+
+    .text p {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeInUp {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
+
+    /* Optional: delay each section slightly */
+    .section:nth-of-type(2) { animation-delay: 0.3s; }
+    .section:nth-of-type(3) { animation-delay: 0.5s; }
+    .section:nth-of-type(4) { animation-delay: 0.7s; }
+    .section:nth-of-type(5) { animation-delay: 0.9s; }
+  </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-   <header id="navbar">
-    <a href="index.html" class="logo">RamDev Group</a>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-          <a href="about.html">About ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="about.html">Overview</a></li>
-            
-            <li><a href="team.html">Our Team</a></li>
-          </ul>
-        </li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-        <li><a href="project.html">Our Project</a></li>
-       
-      </ul>
-    </nav>
-  </header>
+  <!-- Navbar Include -->
+  <div id="navbar-placeholder"></div>
 
-  <!-- CSR Title -->
+  <!-- CSR Header -->
   <section class="section csr-header">
     <h2>CSR – Sustaining the Society that Sustains Us</h2>
     <p>
@@ -49,6 +118,7 @@
       </p>
     </div>
   </section>
+
   <!-- Devotional Patron -->
   <section class="section row-section reverse">
     <div class="image">
@@ -62,7 +132,7 @@
     </div>
   </section>
 
-  <!-- Tribal School and Development -->
+  <!-- Tribal School -->
   <section class="section row-section">
     <div class="image">
       <img src="images/school.png" alt="Tribal School Development">
@@ -88,58 +158,19 @@
     </div>
   </section>
 
+  <!-- Footer Include -->
+  <div id="footer-placeholder"></div>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="footer-container">
-    <!-- Company Info -->
-    <div class="footer-section">
-  <h3>RamDev Group</h3>
-  <p>Shaping Dreams Into Reality</p>
+  <!-- JS to Load Navbar & Footer -->
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
 
-  <div class="footer-social-wrapper">
-    <div class="social-icons">
-      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-    </div>
-    <div class="footer-extra-info">
-      <p><strong>Follow us for updates, events & project launches.</strong></p>
-      <p>We’re active on all major platforms and love staying connected with our clients and community.</p>
-    </div>
-  </div>
-</div>
-
-
-    <!-- Quick Links -->
-    <div class="footer-section">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="project.html">Our Projects</a></li>
-        <li><a href="team.html">CRS</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact Info -->
-    <div class="footer-section">
-      <h4>Contact</h4>
-      <p>Swagat Apartment, 6th Floor,<br>
-         Shraddhanand Road, Vile Parle (E),<br>
-         Mumbai - 400057</p>
-      <p>Email: <a href="mailto:info@ramdevgroup.com">info@ramdevgroup.com</a></p>
-      <p>Website: <a href="https://ramdevgroupindia.com" target="_blank">ramdevgroupindia.com</a></p>
-    </div>
-  </div>
-
-  <!-- Footer Bottom -->
-  <div class="footer-bottom">
-    <p>Created by <span class="highlight">Itegoss</span> | © 2025 All rights reserved</p>
-  </div>
-</footer>
-
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
 
 </body>
 </html>

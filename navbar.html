@@ -1,0 +1,55 @@
+<header id="navbar">
+  <a href="index.html" class="logo">RamDev Group</a>
+
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav>
+    <ul class="nav-links" id="nav-links">
+
+      <li><a href="#home">Home</a></li>
+
+      <li class="dropdown">
+        <a href="project.html" onclick="toggleDropdown(event)">Projects</a>
+       
+      </li>
+
+      <li class="dropdown">
+        <a href="#" onclick="toggleDropdown(event)">About</a>
+        <ul class="dropdown-menu">
+          <li><a href="about.html">Overview</a></li>
+          <li><a href="sustain.html">Sustain Us</a></li>
+          <li><a href="team.html">Our Team</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="contact.html" onclick="toggleDropdown(event)">Contact</a>
+       
+      </li>
+
+    </ul>
+  </nav>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const toggleBtn = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggleBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // Mobile dropdown toggle
+  function toggleDropdown(event) {
+    if (window.innerWidth <= 768) {
+      event.preventDefault();
+      const parentLi = event.target.closest('.dropdown');
+      parentLi.classList.toggle('open');
+    }
+  }
+</script>
